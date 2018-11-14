@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.li.imitationuc">
+
+    <application
+            android:name=".ImitationUCApplication"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".behavior.ImitateUCActivity">
+        </activity>
+        <activity android:name=".behavior.TestBehaviorActivity">
+        </activity>
+        <activity android:name=".behavior.FloatingActionButtionActivity">
+        </activity>
+        <activity android:name=".behavior.UpDownBehaviorActivity">
+        </activity>
+        <activity android:name=".behavior.SampleHeadBehavorActivity">
+        </activity>
+        <activity android:name=".behavior.JDPullAndPushActivity">
+        </activity>
+        <activity android:name=".behavior.SmartRefreshLayoutActivity">
+        </activity>
+        <activity android:name=".behavior.smartrefresh.TestSartRefreshLayoutActivity">
+        </activity>
+        <activity android:name=".behavior.smartrefresh.TestSmartRefreshActivity">
+        </activity>
+        <activity android:name=".behavior.UCExplorerActivity">
+        </activity>
+        <activity android:name=".RecyclerViewActivity">
+        </activity>
+        <activity android:name=".AnimateActivity">
+        </activity>
+    </application>
+
+</manifest>

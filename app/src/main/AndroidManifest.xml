@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.li.imitationuc">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.li.imitationuc">
 
     <application
             android:name=".ImitationUCApplication"
@@ -41,6 +40,8 @@
         <activity android:name=".RecyclerViewActivity">
         </activity>
         <activity android:name=".AnimateActivity">
+        </activity>
+        <activity android:name=".behavior.CustomerSwapRefreshActivity">
         </activity>
     </application>
 

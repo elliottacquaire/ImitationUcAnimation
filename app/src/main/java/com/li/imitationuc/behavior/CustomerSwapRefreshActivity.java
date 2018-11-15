@@ -1,4 +1,4 @@
-package com.li.imitationuc.behavior.smartrefresh;
+package com.li.imitationuc.behavior;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -6,19 +6,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import com.li.imitationuc.R;
-import com.li.imitationuc.behavior.RecyclerBean;
 import com.li.imitationuc.behavior.adapter.QuickAdapter;
-import com.scwang.smartrefresh.header.FunGameBattleCityHeader;
+import com.li.imitationuc.behavior.customhead.BuyerRunHeader;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
-import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
-import com.scwang.smartrefresh.layout.footer.BallPulseFooter;
-import com.scwang.smartrefresh.layout.footer.FalsifyFooter;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestSmartRefreshActivity extends AppCompatActivity {
+public class CustomerSwapRefreshActivity extends AppCompatActivity {
 
     private RefreshLayout refreshLayout;
 
@@ -28,11 +24,10 @@ public class TestSmartRefreshActivity extends AppCompatActivity {
 
     private List<RecyclerBean> recyclerBeanList;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_smart_refresh);
+        setContentView(R.layout.activity_customer_swap_refresh);
 
         initDate();
         initView();
@@ -50,7 +45,7 @@ public class TestSmartRefreshActivity extends AppCompatActivity {
 //        refreshLayout.setRefreshHeader(new WaveSwipeHeader(this)); //全屏水波
 //        refreshLayout.setRefreshHeader(new MaterialHeader(this)); //官方主题
 //        refreshLayout.setRefreshHeader(new FunGameHitBlockHeader(this)); //打砖块
-        refreshLayout.setRefreshHeader(new FunGameBattleCityHeader(this)); //城市战争
+//        refreshLayout.setRefreshHeader(new FunGameBattleCityHeader(this)); //城市战争
 //        refreshLayout.setRefreshHeader(new TaurusHeader(this)); //冲上云霄
 //        refreshLayout.setRefreshHeader(new PhoenixHeader(this)); //金色校园
 //        refreshLayout.setRefreshHeader(new ClassicsHeader(this)); //传统风格
@@ -60,9 +55,11 @@ public class TestSmartRefreshActivity extends AppCompatActivity {
 //        refreshLayout.setRefreshHeader(new DropBoxHeader(this)); //掉盒子
 //        refreshLayout.setRefreshHeader(new DeliveryHeader(this)); //气球快递
 
+        refreshLayout.setRefreshHeader(new BuyerRunHeader(this));
 
-        refreshLayout.setRefreshFooter(new BallPulseFooter(this).setSpinnerStyle(SpinnerStyle.Scale)); //球脉冲 样式 footer
-        refreshLayout.setRefreshFooter(new FalsifyFooter(this));
+
+//        refreshLayout.setRefreshFooter(new BallPulseFooter(this).setSpinnerStyle(SpinnerStyle.Scale)); //球脉冲 样式 footer
+//        refreshLayout.setRefreshFooter(new FalsifyFooter(this));
 
 
         refreshLayout.setOnRefreshListener(new OnRefreshListener() {
@@ -112,5 +109,4 @@ public class TestSmartRefreshActivity extends AppCompatActivity {
             }
         }
     }
-
 }

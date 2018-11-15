@@ -15,7 +15,7 @@ class SmartRefreshLayoutActivity : AppCompatActivity() , View.OnClickListener{
         when(v?.id){
             R.id.button10 -> jumpActivity(TestSartRefreshLayoutActivity().javaClass)
             R.id.button11 -> jumpActivity(TestSmartRefreshActivity().javaClass)
-            R.id.button12 -> jumpActivity(TestSartRefreshLayoutActivity().javaClass)
+            R.id.button12 -> jumpActivity(CustomerSwapRefreshActivity().javaClass)
         }
     }
 
